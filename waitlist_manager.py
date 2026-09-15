@@ -63,10 +63,13 @@ class LinkedList:
             current_node = current_node.next
 
     def print_list(self):
-        current_node = self.head
-        while current_node != None:
-            print(current_node)
-            current_node = current_node.next
+        if self.head == None:
+            print("The waitlist is empty")
+        else:
+            current_node = self.head
+            while current_node != None:
+                print(current_node)
+                current_node = current_node.next
 
                 
         
