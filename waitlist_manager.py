@@ -61,6 +61,7 @@ class LinkedList:
                 break
             prev_node = current_node
             current_node = current_node.next
+        print(f'{name} not found')
 
     def print_list(self):
         if self.head == None:
