@@ -11,12 +11,9 @@ class Node:
         self.name = name
         self.next = None
 
+
     def __str__(self):
         return f'Name: {self.name}'
-
-
-    
-    
 
 
 
@@ -36,10 +33,12 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+
     def add_front(self, name):
         new_node = Node(name)
         new_node.next = self.head
         self.head = new_node
+
 
     def add_end(self, name):
         if self.head == None:
@@ -50,6 +49,7 @@ class LinkedList:
             while current_node.next != None:
                 current_node = current_node.next
             current_node.next = Node(name)
+
 
     def remove(self, name):
         current_node = self.head
@@ -63,9 +63,11 @@ class LinkedList:
             current_node = current_node.next
         print(f'{name} not found')
 
+
     def print_list(self):
         if self.head == None:
             print("The waitlist is empty")
+
         else:
             current_node = self.head
             while current_node != None:
@@ -115,12 +117,12 @@ def waitlist_generator():
             # Print out the entire linked list using the print_list method.
             customer_list.print_list()
             
-            
-            
 
         elif choice == "5":
             print("Exiting waitlist manager.")
             break
+
+        
         else:
             print("Invalid option. Please choose 1–5.")
 
