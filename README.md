@@ -8,6 +8,8 @@ A desgin memo is contained at the bottom of [waitlist_manager.py](waitlist_manag
 
 ## Original Instructions 
 
+(These were the instructions included with the repository, the instructions given in class had slightly different requirements)
+
 You've joined the internal tools team at an event ticketing company. The support staff needs a way to manage customer waitlists when events sell out. Some customers need to be added to the front (VIPs), others go to the end (general customers), and sometimes specific customers need to be removed manually. 
 
 Instead of relying on built-in lists or queues, you're tasked with building a custom linked list structure that gives full control over how the waitlist behaves. Your program should run in the terminal and allow users to: 
