@@ -41,6 +41,7 @@ class LinkedList:
 
 
     def add_end(self, name):
+        #empty list, new head
         if self.head == None:
             self.head = Node(name)
 
@@ -57,10 +58,18 @@ class LinkedList:
 
         while current_node != None:
             if current_node.name == name:
-                prev_node.next = current_node.next
-                break
+                if current_node == self.head:
+                    self.head = self.head.next
+
+                else:
+                    prev_node.next = current_node.next
+                    
+                return #name found and removed, no need to continue
+            
             prev_node = current_node
             current_node = current_node.next
+
+        #return statement means loop only finishes when no name is removed
         print(f'{name} not found')
 
 
@@ -122,7 +131,7 @@ def waitlist_generator():
             print("Exiting waitlist manager.")
             break
 
-        
+
         else:
             print("Invalid option. Please choose 1–5.")
 
