@@ -38,6 +38,7 @@ class LinkedList:
         new_node = Node(name)
         new_node.next = self.head
         self.head = new_node
+        print(f'{name} was added to the front of the waitlist')
 
 
     def add_end(self, name):
@@ -50,6 +51,8 @@ class LinkedList:
             while current_node.next != None:
                 current_node = current_node.next
             current_node.next = Node(name)
+
+        print(f'{name} was added to the end of the waitlist')
 
 
     def remove(self, name):
@@ -64,6 +67,7 @@ class LinkedList:
                 else:
                     prev_node.next = current_node.next
 
+                print(f'{current_node.name} was removed from waitlist')
                 return #name found and removed, no need to continue
             
             prev_node = current_node
