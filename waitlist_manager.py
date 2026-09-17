@@ -63,7 +63,7 @@ class LinkedList:
 
                 else:
                     prev_node.next = current_node.next
-                    
+
                 return #name found and removed, no need to continue
             
             prev_node = current_node
@@ -141,7 +141,15 @@ waitlist_generator()
 
 '''
 Design Memo: Write Your Design Memo Include a 200–300 word response in your code or in a .txt file:
+
 - How does your list work?
+It stores each item as a node with data and a pointer* to the address of the next node in the list. The list object itself only stores a head which points* to the first node in the list. Insertion into the list is done by swapping pointers* around in the area where the insertion takes places. Traversal can only go one way starting from the head and working towards the back of the list. Any operations done on nodes during traversal need to happen before traversing to the next node (or after coming around again).
+*(I'm used to calling it a pointer, but I believe python technically calls what I used a "reference" to another variable. I'm not sure since don't know the details of Python that well and it serves the same purpose as a pointer regardless.)
+
 - What role does the head play?
+It provides the starting point to start traversing the list, without it there would be no way to access the first node since nothing would point to it. When the list is empty it points to nothing, and when it has items it points to the first node in the list. No nodes can exist before the head because they could not be accessed.
+
 - When might a real engineer need a custom list like this?
+When implementing a queue, deque, or stack. When fast access to the middle of the list is not very important/only the ends of the list are ever accessed (like in a queue or stack). When they need to be conscious of how the list is stored in memory. When the list will store an unknown amount of items. When they want to give the list specialized methods that built in lists don't have.
+
 '''
